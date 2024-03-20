@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/14RKqxlvuOx7OSQcbm15t-TqQxDlH8K0L
 """
 
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -15,6 +16,7 @@ df = pd.read_csv('placement.csv')
 
 df.head()
 df.shape
+
 
 plt.scatter(df['cgpa'],df['package'])
 plt.xlabel('CGPA')
@@ -29,6 +31,7 @@ from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=2)
 
 from sklearn.linear_model import LinearRegression
+
 
 lr = LinearRegression()
 
